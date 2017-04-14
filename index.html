@@ -12,6 +12,11 @@
       <p>job: {{ job }}</p>
       <a v-bind:href="website">Rony Vidaur</a>
       <p v-html="websiteTag"></p>
+      <button type="button" v-on:click="add(1)">add 1 year</button>
+      <button type="button" @click="subtract(1)">subtract 1 year</button> <!--here I use @ as it is the same as v-on -->
+      <button type="button" @dblclick="add(10)">add 10 years</button>
+      <button type="button" v-on:dblclick="subtract(10)">subtract 10 years</button>
+      <p>Age: {{ age }}</p>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
